@@ -26,7 +26,7 @@ This project was made in collaboration by:
 
 ## Examples
 Server starting
-
+![ft_irc example](https://i.imgur.com/GwBb3fR.gif)
 Interaction between the Server and client
 ![ft_irc with irssi](https://i.imgur.com/kNVbXsq.gif)
 ## Usage
