@@ -32,7 +32,7 @@ This project was made in collaboration by:
 <img src="https://i.imgur.com/kNVbXsq.gif" width="300">
 
 ## Usage
-Before testing the program, you might want to download irssi, which is our preferred client. [irssi download link](https://irssi.org/download/)
+Before testing the program, you might want to download irssi, which is our preferred client [irssi download link](https://irssi.org/download/).
 You can test the program by git cloning the project through a terminal and head into the Makefile and make sure you have the correct cflag based on your operating system. Return to the main directory and
 ```
 make
