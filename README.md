@@ -68,3 +68,13 @@ New client connected, socket 4
 >> PONG ircserver
 ```
 Now from the irssi/client terminal, you can test out our IRC server!
+
+## PS
+if you are experiencing compiling issue with non_block, you might have to head to serverInit.cpp and under Server::serverInit() and choose the one that matches your system
+```
+// linux
+// _serverSocket = socket(AF_INET, SOCK_STREAM | SOCK_NONBLOCK, 0);
+//MacOS
+_serverSocket = socket(AF_INET, SOCK_STREAM, 0);
+fcntl(_serverSocket, F_SETFL, O_NONBLOCK); // for mac user
+```
