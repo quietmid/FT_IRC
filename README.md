@@ -25,10 +25,11 @@ This project was made in collaboration by:
 - Clients quitting: When a client quits, our server alerts the rest of the users, they have any association by channels or priv msg.
 
 ## Examples
-Server starting
-![ft_irc example](https://i.imgur.com/GwBb3fR.gif)
-Interaction between the Server and client
+<h3>Server starting</h3>
+<imsg src="https://i.imgur.com/GwBb3fR.gif" width= 400>
+<h3>Interaction between the Server and client</h3>
 ![ft_irc with irssi](https://i.imgur.com/kNVbXsq.gif)
+
 ## Usage
 Before testing the program, you might want to download irssi, which is our preferred client. [irssi download link](https://irssi.org/download/)
 You can test the program by git cloning the project through a terminal and head into the Makefile and make sure you have the correct cflag based on your operating system. Return to the main directory and
