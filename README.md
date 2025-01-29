@@ -26,7 +26,7 @@ This project was made in collaboration by:
 
 ## Examples
 Server starting
-![ft_irc server](https://imgur.com/GwBb3fR)
+(<blockquote class="imgur-embed-pub" lang="en" data-id="a/SOU7mHi"  ><a href="//imgur.com/a/SOU7mHi">ft_irc</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>)
 Interaction between the Server and client
 ![ft_irc with irssi](https://imgur.com/kNVbXsq)
 ## Usage
