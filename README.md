@@ -25,10 +25,10 @@ This project was made in collaboration by:
 - **Clients quitting:** When a client quits, our server alerts the rest of the users, they have any association by channels or priv msg.
 
 ## Examples
-<h3>Server starting</h3>
+<h4>Server starting</h4>
 <img src="https://i.imgur.com/GwBb3fR.gif" width="300">
       
-<h3>Interaction between the Server and client</h3>
+<h4>Interaction between the Server and client</h4>
 <img src="https://i.imgur.com/kNVbXsq.gif" width="300">
 
 ## Usage
