@@ -10,19 +10,19 @@ This project was made in collaboration by:
 [Joseph Lu](https://github.com/quietmid)
 
 ## Core Features
-- User authentication: Checks if the client connecting is providing the correct port and password information. Return proper error message if the information isn't correct.
-- Welcoming message: Upon successful client registration, client will recieve the welcoming message from our server, which will have the server's information, such as server name, version, server created time and channel modes.
-- Nickname Setting: with /nick <yourNewNick> will change your nickname to your desired new one and alert everyone that you are associated with by channels.
-- Join and leave channels: with /join you can join an existing channels or create a new channel. with /part or /leave you can leave your current channels, if you wish to leave multiple channels at once. you can /part #channelname1,#channelname2,...
-- Private message: clients are allowed to message other clients privately.
-- Setting channel topic: allows the user to set channel topic or to see what the channel topic is
-- Channel Mode: with different channel mode flag, as a channel operator, you will be able to set channel information and rules. For example: /mode +i
-      - +i/-i: this turns on invite only for this channel
-      - +t/-t: -t turns off the restriction that only operator can set channel topic. +t turns the restriction back.
-      - +k <passkey>/-k: adds a channel key, which is required for new comer to add to their command upon wishing to join the channel. -k removes the restriction
-      - +o <nick>/-o <nick>: gives or takes the user's channel operator privilege.
-      - +l <number>/-l : adds a limit to the number of users can be in the channel and the -l removes this restriction
-- Clients quitting: When a client quits, our server alerts the rest of the users, they have any association by channels or priv msg.
+- **User authentication:** Checks if the client connecting is providing the correct port and password information. Returns proper error message if the information isn't correct.
+- **Welcoming message:** Upon successful client registration, client will recieve the welcoming message from our server, which will have the server's information, such as server name, version, server created time and channel modes.
+- **Nickname Setting:** with /nick <yourNewNick> will change your nickname to your desired new one and alert everyone that you are associated with by channels.
+- **Join and leave channels:** with /join you can join an existing channels or create a new channel. with /part or /leave you can leave your current channels, if you wish to leave multiple channels at once. you can /part #channelname1,#channelname2,...
+- **Private message:** clients are allowed to message other clients privately.
+- **Setting channel topic:** allows the user to set channel topic or to see what the channel topic is
+- **Channel Mode:** with different channel mode flag, as a channel operator, you will be able to set channel information and rules. For example: /mode +i
+      *- +i/-i:* this turns on invite only for this channel
+      *- +t/-t:* -t turns off the restriction that only operator can set channel topic. +t turns the restriction back.
+      *- +k <passkey>/-k:* adds a channel key, which is required for new comer to add to their command upon wishing to join the channel. -k removes the restriction
+      *- +o <nick>/-o <nick>:* gives or takes the user's channel operator privilege.
+      *- +l <number>/-l:* adds a limit to the number of users can be in the channel and the -l removes this restriction
+- **Clients quitting:** When a client quits, our server alerts the rest of the users, they have any association by channels or priv msg.
 
 ## Examples
 <h3>Server starting</h3>
