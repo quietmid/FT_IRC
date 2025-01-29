@@ -26,10 +26,10 @@ This project was made in collaboration by:
 
 ## Examples
 <h3>Server starting</h3>
-<img src="https://i.imgur.com/GwBb3fR.gif" width= 400>
+<img src="https://i.imgur.com/GwBb3fR.gif" width="300">
       
 <h3>Interaction between the Server and client</h3>
-![ft_irc with irssi](https://i.imgur.com/kNVbXsq.gif)
+<img src="https://i.imgur.com/kNVbXsq.gif" width="300">
 
 ## Usage
 Before testing the program, you might want to download irssi, which is our preferred client. [irssi download link](https://irssi.org/download/)
