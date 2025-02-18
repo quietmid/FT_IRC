@@ -1,0 +1,50 @@
+name: FT_IRC Basic Check CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+
+    - name: Install dependencies
+      run: sudo apt-get update && sudo apt-get install -y irssi
+      # the -y flag automatically answer yes
+
+    - name: Compile the project
+      run: make
+
+    - name: Testing basic number 1
+      continue-on-error: true
+      run: |
+        echo "Testing ./ircserv without port/password..."
+        ./ircsev || echo "Expected failure occured. Next Test.."
+        
+    - name: Start IRC Server
+      run: |
+         ./ircserv 6667 myPass
+         echo "Waitinf for the server to start ... "
+         sleep 20
+      env:
+        PORT: "6667"
+        PASSWORD: "myPass"
+    - name: Irssi Check with Wrong Password
+      continue-on-error: true
+      run: |
+        echo "client connecting with wrong password"
+        irssi -c 127.0.0.1 -p "$PORT" -w "WrongPass" || echo "expected deny. checking next.."
+    
+    - name: Irssi Check success
+      run: |
+        irssi -c 127.0.0.1 -p "$PORT" -w "$PASSWORD"
+
+    - name: Clean up
+      run: make fclean
