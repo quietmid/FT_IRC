@@ -26,7 +26,7 @@ jobs:
       continue-on-error: true
       run: |
         echo "Testing ./ircserv without port/password..."
-        ./ircsev || echo "Expected failure occured. Next Test.."
+        ./ircserv || echo "Expected failure occured. Next Test.."
         
     - name: Start IRC Server
       run: |
