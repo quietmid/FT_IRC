@@ -31,21 +31,21 @@ jobs:
     - name: Start IRC Server
       run: |
          ./ircserv 6667 myPass &
-         echo "Waitinf for the server to start ... "
+         echo "Waiting for the server to start ... "
          sleep 10
         
     - name: Irssi Check with Wrong Password
       continue-on-error: true
       run: |
         echo "client connecting with wrong password"
-        irssi -c 127.0.0.1 -p 6667 -w WrongPass || echo "expected deny. checking next.."
+        script -q -c "irssi -c 127.0.0.1 -p 6667 -w WrongPass -n testuser" /dev/null || echo "Expected deny. Checking next.."
         pkill -f irssi
         #kill irssi to prevent it from hanging
         
     - name: Irssi Check success
       run: |
         echo "Connecting with the right password"
-        irssi -c 127.0.0.1 -p 6667 -w myPass -n testuser
+        script -q -c "irssi -c 127.0.0.1 -p 6667 -w myPass -n testuser" /dev/null &
         sleep 10
         pkill -f irssi 
         #kill irrsi to prevent it from hanging
