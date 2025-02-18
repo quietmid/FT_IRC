@@ -30,7 +30,7 @@ jobs:
         
     - name: Start IRC Server
       run: |
-         ./ircserv 6667 myPass
+         ./ircserv 6667 myPass &
          echo "Waitinf for the server to start ... "
          sleep 10
       env:
