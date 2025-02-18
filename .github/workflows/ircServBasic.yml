@@ -33,22 +33,19 @@ jobs:
          ./ircserv 6667 myPass &
          echo "Waitinf for the server to start ... "
          sleep 10
-      env:
-        PORT: "6667"
-        PASSWORD: "myPass"
         
     - name: Irssi Check with Wrong Password
       continue-on-error: true
       run: |
         echo "client connecting with wrong password"
-        irssi -c 127.0.0.1 -p "$PORT" -w "WrongPass" || echo "expected deny. checking next.."
+        irssi -c 127.0.0.1 -p 6667 -w WrongPass || echo "expected deny. checking next.."
         pkill -f irssi
         #kill irssi to prevent it from hanging
         
     - name: Irssi Check success
       run: |
         echo "Connecting with the right password"
-        irssi -c 127.0.0.1 -p "$PORT" -w "$PASSWORD" -n testuser
+        irssi -c 127.0.0.1 -p 6667 -w myPass -n testuser
         sleep 10
         pkill -f irssi 
         #kill irrsi to prevent it from hanging
