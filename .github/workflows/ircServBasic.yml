@@ -42,7 +42,9 @@ jobs:
       run: |
         echo "client connecting with wrong password"
         irssi -c 127.0.0.1 -p "$PORT" -w "WrongPass" || echo "expected deny. checking next.."
-    
+        pkill -f irssi
+        #kill irssi to prevent it from hanging
+        
     - name: Irssi Check success
       run: |
         echo "Connecting with the right password"
